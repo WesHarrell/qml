@@ -15,13 +15,13 @@ __description__ = "Quantum Machine Learning"
 __url__ = "https://github.com/qmlcode/qml"
 
 
-FORTRAN = "f90"
+FORTRAN = "ftn"
 
 # GNU (default)
 COMPILER_FLAGS = ["-O3", "-fopenmp", "-m64", "-march=native", "-fPIC",
                     "-Wno-maybe-uninitialized", "-Wno-unused-function", "-Wno-cpp"]
 LINKER_FLAGS = ["-lgomp"]
-MATH_LINKER_FLAGS = ["-lblas", "-llapack"]
+MATH_LINKER_FLAGS = ["-L/opt/cray/pe/libsci/18.07.1/GNU/7.1/x86_64/lib", "-lsci_gnu"]
 
 # UNCOMMENT TO FORCE LINKING TO MKL with GNU compilers:
 if mkl_exists(verbose=True):
@@ -32,7 +32,7 @@ if mkl_exists(verbose=True):
 if sys.platform == "darwin" and all(["gnu" not in arg for arg in sys.argv]):
     COMPILER_FLAGS = ["-O3", "-m64", "-march=native", "-fPIC"]
     LINKER_FLAGS = []
-    MATH_LINKER_FLAGS = ["-lblas", "-llapack"]
+    MATH_LINKER_FLAGS = ["-llibsci_gnu"]
 
 
 # Intel
