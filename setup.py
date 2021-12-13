@@ -21,7 +21,7 @@ FORTRAN = "ftn"
 COMPILER_FLAGS = ["-O3", "-fopenmp", "-m64", "-march=native", "-fPIC",
                     "-Wno-maybe-uninitialized", "-Wno-unused-function", "-Wno-cpp"]
 LINKER_FLAGS = ["-lgomp"]
-MATH_LINKER_FLAGS = ["-L/opt/cray/pe/libsci/18.07.1/GNU/7.1/x86_64/lib", "-lsci_gnu"]
+MATH_LINKER_FLAGS = ["-L/opt/cray/pe/libsci/18.07.1/CRAY/8.6/x86_64/lib", "-lsci_cray"]
 
 # UNCOMMENT TO FORCE LINKING TO MKL with GNU compilers:
 if mkl_exists(verbose=True):
