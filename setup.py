@@ -18,8 +18,10 @@ __url__ = "https://github.com/qmlcode/qml"
 FORTRAN = "ftn"
 
 # GNU (default)
-COMPILER_FLAGS = ["-O3", "-fopenmp", "-m64", "-march=native", "-fPIC",
-                    "-Wno-maybe-uninitialized", "-Wno-unused-function", "-Wno-cpp"]
+#COMPILER_FLAGS = ["-O3", "-fopenmp", "-m64", "-march=native", "-fPIC",
+#                    "-Wno-maybe-uninitialized", "-Wno-unused-function", "-Wno-cpp"]
+
+COMPILER_FLAGS = [""]
 LINKER_FLAGS = ["-lgomp"]
 MATH_LINKER_FLAGS = ["-L/opt/cray/pe/libsci/18.07.1/CRAY/8.6/x86_64/lib", "-lsci_cray"]
 
