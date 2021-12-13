@@ -15,7 +15,7 @@ __description__ = "Quantum Machine Learning"
 __url__ = "https://github.com/qmlcode/qml"
 
 
-FORTRAN = "ftn"
+FORTRAN = "test_fortran_ZZZ"
 
 # GNU (default)
 #COMPILER_FLAGS = ["-O3", "-fopenmp", "-m64", "-march=native", "-fPIC",
